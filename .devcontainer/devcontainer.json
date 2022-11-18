@@ -56,7 +56,7 @@
 	//      "mounts": [ "source=${env:HOME}${env:USERPROFILE}/.aspnet/https,target=/home/vscode/.aspnet/https,type=bind" ],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": ["dotnet restore", "dotnet build"],
+	"postCreateCommand": "dotnet build",
 	"portsAttributes": {
 		"5000": {
 		  "label": "Application",
