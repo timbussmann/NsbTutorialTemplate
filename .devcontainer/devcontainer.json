@@ -1,8 +1,5 @@
 {
-    "build": {
-        "dockerfile": "./Dockerfile",
-        "context": "."
-    },
+	"image": "mcr.microsoft.com/devcontainers/dotnet:6.0",
     "features": {
         "ghcr.io/devcontainers/features/common-utils:1": {
             "installZsh": "true",
@@ -59,7 +56,7 @@
 	//      "mounts": [ "source=${env:HOME}${env:USERPROFILE}/.aspnet/https,target=/home/vscode/.aspnet/https,type=bind" ],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "dotnet restore",
+	"postCreateCommand": ["dotnet restore", "dotnet build"],
 	"portsAttributes": {
 		"5000": {
 		  "label": "Application",
