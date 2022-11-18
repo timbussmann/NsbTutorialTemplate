@@ -12,7 +12,12 @@
                 "Sales",
                 "Billing",
                 "Platform"
-            ]
+            ],
+            "presentation": {
+                "hidden": false,
+                "group": "solution",
+                "order": 1
+            }
         },
         {
             "name": "Debug All + Shipping",
@@ -23,7 +28,12 @@
                 "Billing",
                 "Platform",
                 "Shipping"
-            ]
+            ],
+            "presentation": {
+                "hidden": true,
+                "group": "solution",
+                "order": 2
+            }
         }
     ],
     "configurations": [
@@ -51,7 +61,7 @@
             "program": "${workspaceFolder}/Sales/bin/Debug/net6.0/Sales.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
-            "stopAtEntry": false
+            "stopAtEntry": false,
         },
         {
             "name": "Billing",
@@ -79,13 +89,6 @@
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
-            "console": "externalTerminal",
-        },
-        {
-            "name": ".NET Core Attach",
-            "type": "coreclr",
-            "request": "attach",
-            "processId": "${command:pickProcess}"
         }
     ]
 }
